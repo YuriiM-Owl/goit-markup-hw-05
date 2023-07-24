@@ -64,7 +64,11 @@
       <section class="hero section">
         <div class="container">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
-          <button class="btn order-btn" type="button" data-modal-open>
+          <button
+            class="btn btn-primary order-btn"
+            type="button"
+            data-modal-open
+          >
             Order Service
           </button>
         </div>
@@ -588,19 +592,97 @@
             </li>
           </ul>
         </div>
+        <!-- Subscribe form -->
+        <form class="subscribe-form">
+          <label class="subscribe-label text" for="email-subscribe"
+            >Subscribe</label
+          >
+          <input
+            class="subscibe-input"
+            type="email"
+            name="subscibe-email"
+            id="email-subscribe"
+            placeholder="E-mail"
+          />
+          <button class="subscribe-btn btn" type="submit">
+            Subscribe
+            <svg class="subscribe-icon" width="24" height="24">
+              <use href="./images/icons.svg#send-icon"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
     <!-------------------- Modal -------------------->
-    <div class="modal-container is-hidden" data-modal>
+    <!-- TODO add is-hidden before push -->
+    <div class="modal-container" data-modal>
       <div class="modal-body">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-close-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#close-btn-icon"></use>
           </svg>
         </button>
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="input-wrapper">
+            <label class="modal-label" for="user-name">Name</label>
+            <div class="input-box">
+              <input
+                class="modal-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./images/icons.svg#person-icon"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label class="modal-label" for="user-tel">Phone</label>
+            <div class="input-box">
+              <input
+                class="modal-input"
+                type="tel"
+                name="user-tel"
+                id="user-tel"
+              />
+              <svg class="modal-input-icon" width="18" height="24">
+                <use href="./images/icons.svg#phone-icon"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label class="modal-label" for="user-mail">Email</label>
+            <div class="input-box">
+              <input
+                class="modal-input"
+                type="email"
+                name="user-mail"
+                id="user-mail"
+              />
+              <svg class="modal-input-icon" width="18" height="24">
+                <use href="./images/icons.svg#email-icon"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label class="modal-label" for="user-comment">Comment</label>
+            <textarea
+              class="modal-input"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary modal-btn" type="submit">Send</button>
+        </form>
       </div>
     </div>
-
     <!-- !------------------ JS Files -------------------->
     <script src="./js/modal.js"></script>
   </body>
