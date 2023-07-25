@@ -667,7 +667,8 @@ textarea {
   align-items: center;
 }
 
-/*! ---------------------- Modal ---------------------- */
+/*! ---------------------- Modal Window ---------------------- */
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -687,7 +688,7 @@ textarea {
 
 .modal-body {
   width: 408px;
-  min-height: 584px;
+  /* min-height: 584px; */
   padding: 72px 24px 24px;
   position: absolute;
   top: 50%;
@@ -740,36 +741,50 @@ textarea {
   margin-bottom: 16px;
 }
 
-.modal-form .input-wrapper {
+/** ---------------------- Modal Form ---------------------- */
+
+.modal-input-wrapper {
   margin-bottom: 8px;
 }
 
+.modal-textarea-wrapper {
+  margin-bottom: 16px;
+}
+
+.modal-check-wrapper {
+  margin-bottom: 24px;
+}
+
 .modal-label {
-  display: block;
+  display: inline-block;
   margin-bottom: 4px;
   font-size: 12px;
   color: var(--c-text-subtle);
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
+.modal-check-wrapper .modal-label {
+  margin-bottom: 0;
+}
 
-.modal-input {
+.modal-input-area {
   width: 100%;
   border-radius: 4px;
   border: 1px solid var(--c-modal-ovl);
+  transition: border-color var(--trn-main-transition-params);
 }
 
-.modal-input:is(:hover, :focus) {
+.modal-input-area:is(:hover, :focus) {
   border-color: var(--c-primary);
 }
 
-input.modal-input {
-  height: 40px;
-  padding: 0 16px 0 38px;
+.modal-input-box {
+  position: relative;
 }
 
-.modal-form .input-box {
-  position: relative;
+.modal-input {
+  height: 40px;
+  padding: 0 16px 0 38px;
 }
 
 .modal-input-icon {
@@ -778,24 +793,73 @@ input.modal-input {
   top: 50%;
   transform: translateY(-50%);
   fill: var(--c-decoration-dark);
+  transition: fill var(--trn-main-transition-params);
 }
 
-input.modal-input:is(:hover, :focus) + .modal-input-icon {
+.modal-input:is(:hover, :focus) + .modal-input-icon {
   fill: var(--c-primary);
 }
 
-textarea.modal-input {
+.modal-textarea {
   resize: none;
   height: 120px;
   padding: 8px 16px;
-  margin-bottom: 16px;
 }
 
-.modal-input::placeholder {
+.modal-textarea::placeholder {
   font-size: 12px;
   color: var(--c-modal-ovl);
   line-height: 1.17;
   letter-spacing: 0.04em;
+}
+
+.modal-check-label {
+  display: flex;
+  align-items: flex-start;
+}
+
+.modal-custom-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid var(--c-modal-ovl);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  fill: transparent;
+  transition: background-color var(--trn-main-transition-params),
+    border-color var(--trn-main-transition-params);
+}
+
+.modal-custom-checkbox-icon {
+  transition: fill var(--trn-main-transition-params);
+}
+
+.modal-check-input:checked + .modal-check-label .modal-custom-checkbox {
+  background-color: var(--c-effect);
+  border-color: var(--c-effect);
+  fill: var(--c-decoration-light);
+}
+
+.modal-check-input:focus + .modal-check-label .modal-custom-checkbox {
+  border-color: var(--c-primary);
+}
+
+.modal-custom-checkbox:hover {
+  border-color: var(--c-primary);
+}
+
+.user-conditions-link {
+  display: inline-block;
+  color: var(--c-primary);
+  line-height: 1.33;
+  transition: color var(--trn-main-transition-params);
+}
+
+.user-conditions-link:is(:hover, :focus) {
+  color: var(--c-effect);
 }
 
 .modal-btn {
