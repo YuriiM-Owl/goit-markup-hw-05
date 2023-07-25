@@ -810,8 +810,8 @@ textarea {
 
 /* TODO return after autocheck complete */
 .modal-check-label {
-  /* display: flex;
-  align-items: flex-start; */
+  display: flex;
+  align-items: flex-start;
 }
 
 .modal-custom-checkbox {
