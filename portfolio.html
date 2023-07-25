@@ -345,13 +345,17 @@
         <div class="footer-subscribe-box">
           <p class="text footer-box-title">Subscribe</p>
           <form class="subscribe-form">
-            <label aria-label="subscribe with your email">
+            <label
+              class="subscribe-label screenread-only"
+              aria-label="subscribe with your email"
+            >
               <input
                 class="subscibe-input"
                 type="email"
                 name="subscibe-email"
                 id="email-subscribe"
                 placeholder="E-mail"
+                required
               />
             </label>
             <button class="subscribe-btn btn" type="submit">
