@@ -579,8 +579,7 @@ textarea {
   margin-right: 80px;
 }
 
-.footer-socials-box .text,
-.subscribe-form .text {
+.footer-box-title {
   color: var(--c-text-alt);
   font-weight: 500;
   margin-bottom: 16px;
@@ -617,20 +616,14 @@ textarea {
 
 .subscribe-form {
   display: flex;
-  flex-wrap: wrap;
-  /* TODO remove later? */
-  max-width: 456px;
-}
-
-.subscribe-label {
-  flex-basis: 100%;
+  gap: 24px;
 }
 
 .subscibe-input {
-  width: 100%;
-  max-width: 264px;
-  margin-right: 24px;
-  padding: 8px 16px;
+  width: 264px;
+  height: 40px;
+  /* margin-right: 24px; */
+  padding: 0 16px;
   background-color: transparent;
   color: var(--c-text-alt);
   border: 1px solid var(--c-text-alt);
@@ -649,11 +642,11 @@ textarea {
   padding: 8px 24px;
   background-color: var(--c-primary);
   color: var(--c-text-alt);
-  transition: background-color var(--trn-main-transition-params);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
+  transition: background-color var(--trn-main-transition-params);
 }
 
 .subscribe-btn:is(:hover, :focus) {
