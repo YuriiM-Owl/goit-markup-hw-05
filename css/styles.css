@@ -625,13 +625,12 @@ textarea {
   border: 1px solid var(--c-text-alt);
   border-radius: 4px;
   background-color: transparent;
-  filter: drop-shadow(0px 4px 4px 0px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   padding: 0 16px;
   color: var(--c-text-alt);
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  /* margin-right: 24px; */
 }
 
 .subscibe-input::placeholder {
